@@ -1,0 +1,18 @@
+<h2 class="title">
+  検索結果
+</h2>
+
+<div class="search-box">
+  <% @rooms.each do |room| %>
+    <div class="search-result">
+      <div class="search-img">
+        <%= link_to image_tag("/room_image/#{room.image_name}"), "/rooms/#{room.id}" %>
+      </div>
+      <div class="search-disc">
+        <p class="roomname"><%= room.name %></p>
+        <p class="roomaddress"><%= room.address %></p>
+        <p class="roomprice">¥<%= room.price %></p>
+      </div>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,33 @@
+<div class="edit-box">
+
+  <h2>
+  プロフィール
+  </h2>
+
+  <div class="edit-img">
+    <img src="<%= "/user_image/#{@current_user.image_name}" %>">
+  </div>
+  
+  <%= form_tag("/users/update", {multipart: true}) do %>
+    <div class="editform">
+      <label for="name">名前　</label><input class="border" name="name" placeholder="名前" value="<%= @current_user.name %>">
+    </div>
+    <div class="editform">
+      <label for="email">メールアドレス　</label><input class="border" name="email" placeholder="メールアドレス" value="<%= @current_user.email %>">
+    </div>
+    <div class="editform">
+      <label for="password">パスワード　</label><input class="border" name="password" placeholder="パスワード" type="password" value="<%= @current_user.password %>">
+    </div>
+    <div class="editform">
+      <label for="image">アイコン　</label><input name="image" type="file">
+    </div>
+    <div class="editform padding">
+      <label for="introduction">自己紹介　</label><textarea class="border" name="introduction"><%= @user.introduction %></textarea>
+    </div>
+    
+    <div class="btn">
+      <input value="更新" type="submit">
+    </div>
+  <% end %>
+
+</div>

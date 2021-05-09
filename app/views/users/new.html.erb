@@ -1,0 +1,28 @@
+<div class="form-box">
+
+  <h2>
+  ユーザー新規登録
+  </h2>
+
+  <ul>
+    <% @user.errors.full_messages.each do |message| %>
+      <li>
+        <%= message %>
+      </li>
+    <% end %>
+  </ul>
+  
+  <%= form_tag("/users/create") do %>
+    <div class="form">
+      <input name="name" placeholder="ユーザー名" value="<%= @user.name %>">
+    </div>
+    <div class="form">
+      <input name="email" placeholder="メールアドレス" value="<%= @user.email %>">
+    </div>
+    <div class="form">
+      <input name="password" placeholder="パスワード" type="password" value="<%= @user.password %>">
+    </div>
+    <input value="新規登録" type="submit">
+  <% end %>
+  
+</div>

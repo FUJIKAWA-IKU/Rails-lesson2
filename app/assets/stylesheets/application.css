@@ -13,3 +13,115 @@
  *= require_tree .
  *= require_self
  */
+
+ body {
+    margin: 0;
+ }
+
+ li {
+    list-style: none;
+ }
+
+ ul {
+    padding: 0;
+    margin: 0;
+ }
+
+ td {
+    text-align: center;
+ }
+
+ a {
+    text-decoration: none;
+ }
+
+ p {
+    margin: 0;
+    color: #333333;
+ }
+
+ header {
+    background-color: black;
+    color: white;
+    height: 80px;
+    position: relative;
+ }
+
+ .header-img {
+    display: inline-block;
+    padding-top: 5px;
+ }
+
+ .header-right {
+    display: inline-block;
+    color: white;
+    position: absolute;
+    right: 30px;
+    top: 10px;
+ }
+
+ .header-list {
+    display: flex;
+ }
+
+ .header-list li {
+    display: inline-block;
+    margin-right: 10px;
+ }
+ 
+ .header-list a {
+    color: white;
+ }
+
+ .align {
+    align-self: center;
+ }
+
+ .line-bottom {
+    border-bottom: 1px solid white;
+ }
+
+ .currentuser-img {
+    width: 70px;
+    display: inline-block;
+ }
+
+ .currentuser-img {
+    display: inline-block;
+ }
+
+ .currentuser-img img {
+    width: 100%;
+ }
+
+ .login-btn {
+    background-color: #4a90e2;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+ }
+
+ .regi-btn {
+    background-color: #6c757d;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+ }
+
+ .flash {
+    background-color: #add8e6;
+    color: white;
+    text-align: center;
+ }
+
+ footer {
+    background-color: black;
+    height: 100px;
+ }
+
+ .footer {
+   color: white;
+   text-align: center;
+   padding-top: 40px;
+ }

@@ -1,0 +1,29 @@
+<div class="roomshow">
+
+  <div class="roomshow-img">
+    <img src="<%= "/room_image/#{@room.image_name}" %>">
+  </div>
+  <p class="roomname"><%= @room.name %></p>
+  <p class="roomaddress"><i class="fas fa-map-marker-alt"></i> <%= @room.address %></p>
+  <p class="roomintroduction"><%= @room.introduction %></p>
+  <p class="roomprice">¥<%= @room.price %></p>
+  
+  <% if @current_user %>
+    <% if Reservation.find_by(user_id: @current_user.id, room_id: @room.id) %>
+      <p>予約済み</p>
+    <% else %>
+      <%= form_tag("/reservation/#{@room.id}/create", {method: "post"}) do %>
+        <p>開始日</p>
+        <input type="date" name="start">
+        <p>終了日</p>
+        <input type="date" name="end">
+        <p>人数</p>
+        <input type="number" name="people">
+          <p><input value="予約" type="submit"></p>
+      <% end %>
+    <%end%>
+  <% else %>
+    <%= link_to("ログイン", "/users/login") %>
+  <% end %>
+
+</div>
