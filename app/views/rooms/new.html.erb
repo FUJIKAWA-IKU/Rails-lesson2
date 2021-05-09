@@ -1,0 +1,28 @@
+<div class="room-box">
+
+  <h2>
+  ルーム登録
+  </h2>
+
+  <%= form_tag("/rooms/create", {multipart: true}) do %>
+    <div class="roomnew">
+      <label for="name">名前　</label><input name="name" placeholder="ルーム名を入力">
+    </div>
+    <div class="roomnew padding">
+      <label for="introduction">ルーム紹介　</label><textarea name="introduction"></textarea>
+    </div>
+    <div class="roomnew">
+      <label for="price">料金　</label><input name="price" placeholder="一日あたりの料金を入力" type="number">
+    </div>
+    <div class="roomnew">
+      <label for="address">住所　</label><input name="address" placeholder="住所を入力">
+    </div>
+    <div class="roomnew">
+      <label for="image">ルーム画像　</label><input name="image" type="file">
+    </div>
+    <div class="room-btn">
+      <input class="room-btn" value="ルーム登録" type="submit">
+    </div>
+  <% end %>
+
+</div>

@@ -1,0 +1,29 @@
+<div class="account-box">
+
+  <div class="account-img">
+    <img src="<%= "/user_image/#{@current_user.image_name}" %>">
+  </div>
+  <div class="intro-box">
+    <div class="intro-list">
+      <span>名前</span>
+      <p><%= @current_user.name %></p>
+    </div>
+    <div class="intro-list">
+      <span>メールアドレス</span>
+      <p><%= @current_user.email %></p>
+    </div>
+    <div class="intro-list">
+      <span>パスワード</span>
+      <p><%= @current_user.password %></p>
+    </div>
+    <div class="intro-list">
+      <span>自己紹介</span>
+      <p><%= @current_user.introduction %></p>
+    </div>
+  </div>
+  
+</div>
+
+<p class="center">
+  <%= link_to("編集", "/users/#{@user.id}/edit") %>
+</p>

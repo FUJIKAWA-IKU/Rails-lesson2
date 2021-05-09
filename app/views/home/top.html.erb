@@ -1,0 +1,22 @@
+<div class="top">
+  
+  <div class="padding"></div>
+
+  <div class="top-box">
+    <h2>
+    Potepan Shareでまだ体験したことのない旅をしよう
+    </h2>
+    <%= form_tag(rooms_search_area_path,:method => 'get') do %>
+      <%= label_tag '地域で検索' %>
+      <%= text_field_tag :search %>
+      <%= submit_tag 'Search', :address => nil %>
+    <% end %>
+
+    <%= form_tag(rooms_search_keyword_path,:method => 'get') do %>
+      <%= label_tag 'キーワードで検索' %>
+      <%= text_field_tag :search %>
+      <%= submit_tag 'Search', :address => nil %>
+    <% end %>
+  </div>
+  
+</div>

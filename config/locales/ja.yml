@@ -1,0 +1,8 @@
+ja:
+  time:
+    formats:
+      default: "%Y/%m/%d %H:%M:%S"
+  errors:
+    messages:
+      blank: を入力してください
+
